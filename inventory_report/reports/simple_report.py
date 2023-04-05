@@ -22,6 +22,7 @@ class SimpleReport:
         data_mais_recente = min(
             datas_datetime, key=lambda x: abs((x.date() - date_now).days)
         )
+        data = str(data_mais_recente).split(' ')[0]
 
         empresas_mais_produtos = []
         for product in list_of_products:
@@ -31,6 +32,6 @@ class SimpleReport:
 
         return (
             f"Data de fabricação mais antiga: {data_mais_antiga}\n"
-            f"Data de validade mais próxima: {data_mais_recente}\n"
+            f"Data de validade mais próxima: {data}\n"
             f"Empresa com mais produtos: {nome_da_empresa}"
         )
