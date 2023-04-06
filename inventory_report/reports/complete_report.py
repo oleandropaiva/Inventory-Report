@@ -8,11 +8,11 @@ class CompleteReport(SimpleReport):
         report = super().generate(list_of_products)
         report += "\nProdutos estocados por empresa:\n"
 
-        empresas = []
+        companies = []
         for product in list_of_products:
-            empresas.append(product["nome_da_empresa"])
+            companies.append(product["nome_da_empresa"])
 
-        estoque = Counter(empresas).most_common()
+        estoque = Counter(companies).most_common()
         for empresa, quantidade in estoque:
             report += f"- {empresa}: {quantidade}\n"
 
