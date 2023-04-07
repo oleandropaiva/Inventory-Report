@@ -2,6 +2,7 @@ from inventory_report.reports.simple_report import SimpleReport
 from inventory_report.reports.complete_report import CompleteReport
 import csv
 import json
+import xmltodict
 
 
 class Inventory:
@@ -22,3 +23,6 @@ class Inventory:
         elif path.endswith(".json"):
             with open(path, "r") as file:
                 return json.load(file)
+        elif path.endswith(".xml"):
+            with open(path, "r") as file:
+                return xmltodict.parse(file.read())["dataset"]["record"]
