@@ -1,7 +1,6 @@
 # Boas-vindas ao repositório do Inventory Reports
 
-<details>
-  <summary><strong>👨‍💻 O que deverá ser desenvolvido</strong></summary><br />
+<strong>👨‍💻 O que foi desenvolvido</strong><br />
 
   Neste projeto vamos fazer algo utilizando a Programação Orientada a Objetos! Será implementado um **gerador de relatórios** que recebe como entrada arquivos com dados de um estoque e gera, como saída, um relatório acerca destes dados.
 
